@@ -13,9 +13,9 @@ create:crystal-structure=sc
 # System Dimensions:
 #------------------------------------------
 dimensions:unit-cell-size = 3.54 !A
-dimensions:system-size-x = 7.7 !nm
-dimensions:system-size-y = 7.7 !nm
-dimensions:system-size-z = 7.7 !nm
+dimensions:system-size-x = 2.7 !nm
+dimensions:system-size-y = 2.7 !nm
+dimensions:system-size-z = 2.7 !nm
 
 #------------------------------------------
 # Material Files:
@@ -25,16 +25,20 @@ material:file=Co.mat
 #------------------------------------------
 # Simulation attributes:
 #------------------------------------------
-sim:temperature=300.0
-sim:time-steps-increment=10
-sim:total-time-steps=10000
+sim:minimum-temperature=0
+sim:temperature-increment=50
+sim:maximum-temperature=1400
+#sim:temperature=300.0
+sim:time-steps-increment=1
+sim:total-time-steps=0
+sim:loop-time-steps=10000
 sim:time-step=1.0E-15
 
 #------------------------------------------
 # Program and integrator details
 #------------------------------------------
-sim:program=benchmark
-sim:integrator=llg-heun
+sim:program=curie-temperature
+sim:integrator=monte-carlo
 
 #------------------------------------------
 # data output
@@ -45,5 +49,5 @@ output:magnetisation
 output:magnetisation-length
 output:output-rate = 1000
 
-screen:time-steps
+screen:temperature
 screen:magnetisation-length
