@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-//
+///
 //  Vampire - A code for atomistic simulation of magnetic materials
 //
 //  Copyright (C) 2009-2012 R.F.L.Evans
