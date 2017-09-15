@@ -157,6 +157,7 @@ namespace sim{
 	extern int LLG_Heun_mpi();
 	extern int LLG_Heun_cuda();
 	extern int LLG_Midpoint();
+   extern int Simplicit();
 	extern int LLG_Midpoint_mpi();
 	extern int LLG_Midpoint_cuda();
 	extern int MonteCarlo();
@@ -168,6 +169,7 @@ namespace sim{
 	extern void CMCinit();
 	extern int LLGinit();
 	extern void CMCMCinit();
+   extern int SimplicitInit();
 
 	// Field and energy functions
 	extern double calculate_spin_energy(const int atom);

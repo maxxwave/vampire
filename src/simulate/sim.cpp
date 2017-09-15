@@ -623,6 +623,12 @@ void integrate_serial(int n_steps){
 				// increment time
 				increment_time();
 			}
+      case 5:{ // Semi-implicit method ([1]J. H. Mentink et al.,[2] M. Ellis)
+         for(int ti=0; ti<n_steps; ti++){
+            sim::simplicit();
+            // increment time
+            increment_time();
+         }
 			break;
 
 		default:{
@@ -714,6 +720,15 @@ int integrate_mpi(int n_steps){
 				// increment time
 				increment_time();
 			}
+      case 4: //Semi-implicit
+			for(int ti=0;ti<n_steps;ti++){
+		   terminaltextcolor(RED);
+			std::cerr << "Error - Semi-implicit unavailable for parallel execution" << std::endl;
+         terminaltextcolor(WHITE);
+         err::vexit();
+         // increment time
+         increment_time();
+         }
 			break;
 
 		default:{
