@@ -623,9 +623,11 @@ void integrate_serial(int n_steps){
 				// increment time
 				increment_time();
 			}
+         break;
+
       case 5:{ // Semi-implicit method ([1]J. H. Mentink et al.,[2] M. Ellis)
          for(int ti=0; ti<n_steps; ti++){
-            sim::simplicit();
+            sim::Simplicit();
             // increment time
             increment_time();
          }
@@ -634,10 +636,9 @@ void integrate_serial(int n_steps){
 		default:{
 			std::cerr << "Unknown integrator type "<< sim::integrator << " requested, exiting" << std::endl;
          err::vexit();
-		}
-	}
-
-   return;
+		   }
+	   }
+   }
 }
 
 /// @brief Wrapper function to call MPI parallel integrators
