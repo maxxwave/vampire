@@ -86,6 +86,7 @@ obj/simulate/fields.o \
 obj/simulate/LLB.o \
 obj/simulate/LLGHeun.o \
 obj/simulate/LLGMidpoint.o \
+obj/simulate/Semi_Implicit.o \
 obj/simulate/mc.o \
 obj/simulate/mc_moves.o \
 obj/simulate/cmc.o \
